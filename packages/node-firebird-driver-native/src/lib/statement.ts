@@ -104,4 +104,24 @@ export class StatementImpl extends AbstractStatement {
 			Promise<ResultSetImpl> {
 		return await ResultSetImpl.open(this, transaction as TransactionImpl, parameters, options);
 	}
+
+	get columnLabels(): Promise<string[]> {
+		const asyncFunc = async (): Promise<string[]> => {
+			if (!this.outMetadata)
+				return [];
+
+			return await this.attachment.client.statusAction(async status => {
+				const metaData = this.outMetadata!;
+				const count = metaData.getCountSync(status);
+				const array: string[] = [];
+
+				for (let i = 0; i < count; ++i)
+					array.push(metaData.getAliasSync(status, i)!);
+
+				return array;
+			});
+		};
+
+		return asyncFunc();
+	}
 }

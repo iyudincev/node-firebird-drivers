@@ -1,9 +1,19 @@
-## 2.0.0-beta.0
+## next
+
+### driver
+
+* Feature [#43](https://github.com/asfernandes/node-firebird-drivers/issues/43) - Add Statement.columnLabels property.
+
+## 2.0.0 (December, 06, 2019)
+
+### driver
+
+* Feature [#34](https://github.com/asfernandes/node-firebird-drivers/issues/34) - Support for Firebird events.
+* Feature [#42](https://github.com/asfernandes/node-firebird-drivers/pull/42) - SQL role name in connection options.
 
 ### native-api
 
 * Minimal node version is 10.6.0.
-* Feature [#34](https://github.com/asfernandes/node-firebird-drivers/issues/34) - Support for Firebird events.
 * Fix [#41](https://github.com/asfernandes/node-firebird-drivers/issues/41) - Error: pointer argument must be an instance of Pointer class or null with node v13.
 
 ### all projects
