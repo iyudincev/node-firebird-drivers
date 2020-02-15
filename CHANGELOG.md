@@ -1,7 +1,8 @@
-## next
+## 2.1.0 (December, 29, 2019)
 
 ### driver
 
+* Feature [#30](https://github.com/asfernandes/node-firebird-drivers/issues/30) - Add methods executeReturningAsObject and fetchAsObject to return records as objects instead of arrays.
 * Feature [#43](https://github.com/asfernandes/node-firebird-drivers/issues/43) - Add Statement.columnLabels property.
 
 ## 2.0.0 (December, 06, 2019)
